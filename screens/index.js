@@ -23,3 +23,5 @@ export { default as SafetyTimer } from "./SafetyTimer";
 export { default as AcceptRequest } from "./AcceptRequest";
 
 export { default as Profile } from "./Profile";
+
+export { default as Map } from "./Map";

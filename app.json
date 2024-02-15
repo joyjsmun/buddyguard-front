@@ -13,16 +13,25 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.buddyguard",
+      "package": "com.anonymous.buddyguard",
+      "config": {
+        "googleMaps": { "apiKey": "AIzaSyARjKB9FOPq9vo2PKAwS7j0ZeYwXaSz9qY" }
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.buddyguard",
+      "config": {
+        "googleMaps": { "apiKey": "AIzaSyARjKB9FOPq9vo2PKAwS7j0ZeYwXaSz9qY" }
+      },
+      "web": {
+        "favicon": "./assets/favicon.png"
       }
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }

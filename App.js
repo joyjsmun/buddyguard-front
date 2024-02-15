@@ -11,9 +11,9 @@ import {
   Hangout,
   HangoutCreate,
   HangoutDetail,
+  Map,
   Onboarding,
   Profile,
-  SafetyTime,
   SafetyTimer,
   SupportConfirm,
   SupportRequestInfo,
@@ -75,6 +75,8 @@ export default function App() {
         <Stack.Screen name="SafetyTimer" component={SafetyTimer} />
         {/* Profile */}
         <Stack.Screen name="Profile" component={Profile} />
+        {/* Map */}
+        <Stack.Screen name="Map" component={Map} />
       </Stack.Navigator>
 
       {/* Group tabs */}

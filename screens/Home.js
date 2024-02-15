@@ -46,7 +46,7 @@ const Home = () => {
             <Text className="text-[#121418] font-medium text-lg">
               Explore Your Neighborhood
             </Text>
-            <TouchableOpacity onPress={() => navigation.navigate("Hangout")}>
+            <TouchableOpacity onPress={() => navigation.navigate("Map")}>
               <Image className="w-full h-40  mb-2 rounded-lg" source={Map} />
             </TouchableOpacity>
           </View>
