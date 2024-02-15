@@ -8,9 +8,10 @@ import {
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { Feather, FontAwesome, MaterialIcons } from "@expo/vector-icons";
+import { MaterialIcons } from "@expo/vector-icons";
 import { Avatar1, Hangout5, Map } from "../assets/images";
 import { LinearGradient } from "expo-linear-gradient";
+import { Icon } from "@rneui/themed";
 
 const HangoutDetail = () => {
   const navigation = useNavigation();
@@ -57,15 +58,30 @@ const HangoutDetail = () => {
             {/* tags */}
             <View className="flex flex-row justify-around items-center">
               <View className="flex flex-row bg-[#F8C145] py-1 px-2 justify-center items-center rounded-2xl">
-                <MaterialIcons name="sports-tennis" size={24} color={"#fff"} />
+                <Icon
+                  type="material"
+                  name="sports-tennis"
+                  size={24}
+                  color={"#fff"}
+                />
                 <Text className="text-white ml-1">Sports</Text>
               </View>
               <View className="flex flex-row bg-[#337B58] py-1 px-2 justify-center items-center rounded-2xl">
-                <FontAwesome name="group" size={24} color={"#fff"} />
+                <Icon
+                  type="font-awesome"
+                  name="group"
+                  size={24}
+                  color={"#fff"}
+                />
                 <Text className="text-white ml-1">Group</Text>
               </View>
               <View className="flex flex-row bg-[#FF5757] py-1 px-2 justify-center items-center rounded-2xl">
-                <MaterialIcons name="sports-tennis" size={24} color={"#fff"} />
+                <Icon
+                  type="material"
+                  name="sports-tennis"
+                  size={24}
+                  color={"#fff"}
+                />
                 <Text className="text-white ml-1">Outdoor</Text>
               </View>
             </View>
@@ -94,7 +110,8 @@ const HangoutDetail = () => {
                     className="absolute left-11 bottom-1
                    "
                   >
-                    <MaterialIcons
+                    <Icon
+                      type="material"
                       name="verified"
                       size={24}
                       color={"#3998FF"}
@@ -111,11 +128,16 @@ const HangoutDetail = () => {
             {/* Bottom Menu */}
             <View className="flex flex-row justify-between items-center">
               <View>
-                <FontAwesome name="commenting" size={50} color={"#CAC6D1"} />
+                <Icon
+                  type="font-awesome"
+                  name="commenting"
+                  size={50}
+                  color={"#CAC6D1"}
+                />
               </View>
-              <LinearGradient
-                colors={["#1B75BC", "#1B75BC"]}
+              <View
                 style={{
+                  backgroundColor: "#1B75BC",
                   width: "75%",
                   height: 60,
                   justifyContent: "center",
@@ -126,7 +148,7 @@ const HangoutDetail = () => {
                 <Text className="text-white font-bold text-2xl">
                   Join Event
                 </Text>
-              </LinearGradient>
+              </View>
             </View>
           </View>
         </View>

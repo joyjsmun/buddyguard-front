@@ -13,12 +13,9 @@ import React, {
   useEffect,
 } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Feather,
-  FontAwesome,
-  Ionicons,
-  MaterialIcons,
-} from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
+import { Icon } from "@rneui/themed";
+
 import { Avatar1, Avatar2, LogoImage, Map } from "../assets/images";
 import { LinearGradient } from "expo-linear-gradient";
 import Modal from "../components/Modal";
@@ -75,7 +72,12 @@ const WalkStatus = () => {
                 <Text className="font-bold text-red-500">1 min left</Text>
               </View>
               <View className=" rounded-3xl bg-[#dcd9e2] px-4 py-4 flex flex-row items-center space-x-3">
-                <Ionicons name="location-outline" size={30} color="#121418" />
+                <Icon
+                  type="ionicon"
+                  name="location-outline"
+                  size={30}
+                  color="#121418"
+                />
                 <Text className="text-base"> 2321st, Bogota, Columbia</Text>
               </View>
             </View>
@@ -170,11 +172,9 @@ const WalkStatus = () => {
               </View> */}
 
               <TouchableOpacity onPress={onSosRequestModal}>
-                <LinearGradient
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 0 }}
-                  colors={["#FF5757", "#FF5757"]}
+                <View
                   style={{
+                    backgroundColor: "#FF5757",
                     width: 140,
                     height: 60,
                     justifyContent: "center",
@@ -186,16 +186,14 @@ const WalkStatus = () => {
                   <Text className="text-[#E5E7ED] font-bold text-2xl">
                     Send SOS
                   </Text>
-                </LinearGradient>
+                </View>
               </TouchableOpacity>
               <TouchableOpacity
                 onPress={() => navigation.navigate("SafetyTimer")}
               >
-                <LinearGradient
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 0 }}
-                  colors={["#4F9171", "#4F9171"]}
+                <View
                   style={{
+                    backgroundColor: "#4F9171",
                     width: 140,
                     height: 60,
                     justifyContent: "center",
@@ -207,7 +205,7 @@ const WalkStatus = () => {
                   <Text className="text-[#E5E7ED] font-bold text-2xl">
                     Arrived
                   </Text>
-                </LinearGradient>
+                </View>
               </TouchableOpacity>
             </View>
           </View>

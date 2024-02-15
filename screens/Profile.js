@@ -9,12 +9,8 @@ import {
 } from "react-native";
 import React, { useCallback, useLayoutEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Feather,
-  FontAwesome5,
-  MaterialCommunityIcons,
-  MaterialIcons,
-} from "@expo/vector-icons";
+import { Icon } from "@rneui/themed";
+
 import { BarcodeImg, ProfileImg } from "../assets/images";
 
 import Modal from "../components/Modal";
@@ -81,7 +77,8 @@ const Profile = () => {
                   <Text className="font-bold text-2xl text-center">Vita C</Text>
                   {/* Verified Icon */}
                   {isPersonalInfoSaved && (
-                    <MaterialIcons
+                    <Icon
+                      type="material"
                       name="verified"
                       size={24}
                       color={"#3998FF"}
@@ -102,7 +99,7 @@ const Profile = () => {
               <Text className="font-bold mb-1 ">Group Info</Text>
               <View className="flex flex-row space-x-2">
                 <View className="flex flex-row pl-5 justify-start items-center space-x-5 rounded-lg bg-[#fff] w-[80%] h-16">
-                  <MaterialIcons name="groups" size={45} />
+                  <Icon type="material" name="groups" size={45} />
                   <Text className="font-medium text-base">
                     Team Buddy Guard
                   </Text>
@@ -118,7 +115,7 @@ const Profile = () => {
               <Text className="font-bold mb-1">S0S Private Info</Text>
               <View className="flex flex-row space-x-2">
                 <View className="flex flex-row pl-5 justify-start items-center space-x-5 rounded-lg bg-[#fff] w-[80%] h-16">
-                  <FontAwesome5 name="user-lock" size={24} />
+                  <Icon type="font-awesome-5" name="user-lock" size={24} />
                   <Text className="font-medium text-base">
                     Encrypted Personal Info
                   </Text>
@@ -172,7 +169,7 @@ const Profile = () => {
               <Text className="font-bold mb-1">Reward & Reputation Info</Text>
               <View className="flex flex-row space-x-2">
                 <View className="flex flex-row pl-5 pr-10 justify-between items-center space-x-5 rounded-lg bg-[#fff] w-[80%] h-16">
-                  <FontAwesome5 name="coins" size={30} />
+                  <Icon type="font-awesome-5" name="coins" size={30} />
                   <Text className="font-medium text-base ">188 BG Token</Text>
                 </View>
                 <TouchableOpacity className="rounded-2xl bg-[#fff] w-16 h-16 flex justify-center items-center">

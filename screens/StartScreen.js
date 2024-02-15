@@ -1,12 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React, { useLayoutEffect } from "react";
-import {
-  SafeAreaView,
-  Text,
-  View,
-  Image,
-  TouchableOpacity,
-} from "react-native";
+import { SafeAreaView, Text, View, TouchableOpacity } from "react-native";
 import { LogoImage } from "../assets/images";
 import * as Animatable from "react-native-animatable";
 

@@ -17,7 +17,7 @@
       "bundleIdentifier": "com.anonymous.buddyguard",
       "package": "com.anonymous.buddyguard",
       "config": {
-        "googleMaps": { "apiKey": "AIzaSyARjKB9FOPq9vo2PKAwS7j0ZeYwXaSz9qY" }
+        "googleMaps": { "apiKey": "AIzaSyCCZAcsF5mdatWSmrhQOYAR3c-FE_QHH8s" }
       }
     },
     "android": {
@@ -27,7 +27,7 @@
       },
       "package": "com.anonymous.buddyguard",
       "config": {
-        "googleMaps": { "apiKey": "AIzaSyARjKB9FOPq9vo2PKAwS7j0ZeYwXaSz9qY" }
+        "googleMaps": { "apiKey": "AIzaSyCCZAcsF5mdatWSmrhQOYAR3c-FE_QHH8s" }
       },
       "web": {
         "favicon": "./assets/favicon.png"

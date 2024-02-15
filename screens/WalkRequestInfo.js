@@ -9,14 +9,9 @@ import {
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Feather,
-  MaterialCommunityIcons,
-  MaterialIcons,
-} from "@expo/vector-icons";
-import { Avatar1, Hangout1, Hangout2, Hangout3, Map } from "../assets/images";
-import { LinearGradient } from "expo-linear-gradient";
-import SwipeButton from "../components/SwipeButton";
+import { MaterialIcons } from "@expo/vector-icons";
+import { Icon } from "@rneui/themed";
+import { Map } from "../assets/images";
 
 const WalkRequestInfo = () => {
   const navigation = useNavigation();
@@ -61,7 +56,8 @@ const WalkRequestInfo = () => {
                   {/* Choose Options */}
                   <View className=" flex space-y-3">
                     <TouchableOpacity className="w-full h-16  flex-row justify-start px-4 items-center  border-2 border-[#4F9171]   rounded-3xl">
-                      <MaterialCommunityIcons
+                      <Icon
+                        type="material-community"
                         name="clock-check-outline"
                         size={30}
                         color={"#121418"}
@@ -72,7 +68,8 @@ const WalkRequestInfo = () => {
                       </Text>
                     </TouchableOpacity>
                     <TouchableOpacity className="w-full h-16  flex-row justify-start  items-center px-4  border-2 border-[#4F9171]  rounded-3xl">
-                      <MaterialIcons
+                      <Icon
+                        type="material"
                         name="online-prediction"
                         size={34}
                         color={"#121418"}
@@ -89,11 +86,9 @@ const WalkRequestInfo = () => {
               <TouchableOpacity
                 onPress={() => navigation.navigate("WalkConfirm")}
               >
-                <LinearGradient
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 0 }}
-                  colors={["#4F9171", "#4F9171"]}
+                <View
                   style={{
+                    backgroundColor: "#4F9171",
                     width: "98%",
                     height: 60,
                     justifyContent: "center",
@@ -102,7 +97,7 @@ const WalkRequestInfo = () => {
                   }}
                 >
                   <Text className="text-white font-bold text-2xl">Next</Text>
-                </LinearGradient>
+                </View>
               </TouchableOpacity>
             </View>
           </View>

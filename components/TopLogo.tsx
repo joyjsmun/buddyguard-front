@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
-import React, { Component } from "react";
-import { SafeAreaView, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
+import { Text, View } from "react-native";
 import * as Animatable from "react-native-animatable";
 import { LogoImage } from "../assets/images";
 

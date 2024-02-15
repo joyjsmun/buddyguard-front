@@ -9,14 +9,8 @@ import {
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Feather,
-  FontAwesome5,
-  MaterialCommunityIcons,
-  MaterialIcons,
-} from "@expo/vector-icons";
 import { Map } from "../assets/images";
-import { LinearGradient } from "expo-linear-gradient";
+import { Icon } from "@rneui/base";
 
 const SupportRequestInfo = () => {
   const navigation = useNavigation();
@@ -57,7 +51,8 @@ const SupportRequestInfo = () => {
                     />
                   </View>
                   <View className="absolute left-3 top-8">
-                    <FontAwesome5
+                    <Icon
+                      type="font-awesome-5"
                       name="hands-helping"
                       size={30}
                       color={"#121418"}
@@ -78,7 +73,8 @@ const SupportRequestInfo = () => {
                     />
                   </View>
                   <View className="absolute left-3 top-10">
-                    <MaterialCommunityIcons
+                    <Icon
+                      type="material-community"
                       name="clock-check-outline"
                       size={30}
                       color={"#121418"}
@@ -99,7 +95,8 @@ const SupportRequestInfo = () => {
                     />
                   </View>
                   <View className="absolute left-3 top-8">
-                    <MaterialIcons
+                    <Icon
+                      type="material"
                       name="location-pin"
                       size={33}
                       color={"#121418"}
@@ -111,11 +108,9 @@ const SupportRequestInfo = () => {
               <TouchableOpacity
                 onPress={() => navigation.navigate("SupportConfirm")}
               >
-                <LinearGradient
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 0 }}
-                  colors={["#1B75BC", "#1B75BC"]}
+                <View
                   style={{
+                    backgroundColor: "#1B75BC",
                     width: "98%",
                     height: 60,
                     justifyContent: "center",
@@ -126,7 +121,7 @@ const SupportRequestInfo = () => {
                   <Text className="text-[#E5E7ED] font-bold text-2xl">
                     Next
                   </Text>
-                </LinearGradient>
+                </View>
               </TouchableOpacity>
             </View>
           </View>

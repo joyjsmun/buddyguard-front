@@ -8,9 +8,8 @@ import {
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { Ionicons } from "@expo/vector-icons";
-import { Avatar1, Avatar2, Map } from "../assets/images";
-import { LinearGradient } from "expo-linear-gradient";
+import { Icon } from "@rneui/themed";
+import { Avatar2, Map } from "../assets/images";
 
 const SupportStatus = () => {
   const navigation = useNavigation();
@@ -66,7 +65,12 @@ const SupportStatus = () => {
                 <Text className="font-bold text-red-500">8 mins left</Text>
               </View>
               <View className=" rounded-3xl bg-[#dcd9e2] px-4 py-4 flex flex-row items-center space-x-3">
-                <Ionicons name="location-outline" size={30} color="#121418" />
+                <Icon
+                  type="ionicon"
+                  name="location-outline"
+                  size={30}
+                  color="#121418"
+                />
                 <Text className="text-base"> 2321st, Bogota, Columbia</Text>
               </View>
             </View>
@@ -79,11 +83,9 @@ const SupportStatus = () => {
               <TouchableOpacity
                 onPress={() => navigation.navigate("SupportRequestInfo")}
               >
-                <LinearGradient
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 0 }}
-                  colors={["#FF5757", "#FF5757"]}
+                <View
                   style={{
+                    backgroundColor: "#FF5757",
                     width: 140,
                     height: 60,
                     justifyContent: "center",
@@ -95,14 +97,12 @@ const SupportStatus = () => {
                   <Text className="text-[#E5E7ED] font-bold text-2xl">
                     Cancel
                   </Text>
-                </LinearGradient>
+                </View>
               </TouchableOpacity>
               <TouchableOpacity onPress={() => navigation.navigate("Home")}>
-                <LinearGradient
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 0 }}
-                  colors={["#1B75BC", "#1B75BC"]}
+                <View
                   style={{
+                    backgroundColor: "#1B75BC",
                     width: 140,
                     height: 60,
                     justifyContent: "center",
@@ -114,7 +114,7 @@ const SupportStatus = () => {
                   <Text className="text-[#E5E7ED] font-bold text-2xl">
                     Finished
                   </Text>
-                </LinearGradient>
+                </View>
               </TouchableOpacity>
             </View>
           </View>

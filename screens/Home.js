@@ -8,10 +8,9 @@ import {
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import { Feather, MaterialCommunityIcons } from "@expo/vector-icons";
-import { Hangout1, Hangout2, Hangout3, Map } from "../assets/images";
-import { LinearGradient } from "expo-linear-gradient";
+import { Hangout1, Hangout3, Map } from "../assets/images";
 import SwipeButton from "../components/SwipeButton";
+import { Icon } from "@rneui/themed";
 
 const Home = () => {
   const navigation = useNavigation();
@@ -34,8 +33,9 @@ const Home = () => {
             <TouchableOpacity
               onPress={() => navigation.navigate("AcceptRequest")}
             >
-              <MaterialCommunityIcons
+              <Icon
                 name="message-badge"
+                type="material-community"
                 size={26}
                 color="#3998FF"
               />

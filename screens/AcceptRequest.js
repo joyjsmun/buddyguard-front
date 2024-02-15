@@ -9,16 +9,8 @@ import {
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Entypo,
-  Feather,
-  FontAwesome5,
-  MaterialCommunityIcons,
-  MaterialIcons,
-} from "@expo/vector-icons";
-import { Avatar1, Hangout1, Hangout2, Hangout3, Map } from "../assets/images";
-import { LinearGradient } from "expo-linear-gradient";
-import SwipeButton from "../components/SwipeButton";
+import { Map } from "../assets/images";
+import { Icon } from "@rneui/themed";
 
 const AcceptRequest = () => {
   const navigation = useNavigation();
@@ -52,7 +44,8 @@ const AcceptRequest = () => {
                   <Text className="font-bold text-base">User Info</Text>
                   <View className=" flex space-y-2">
                     <View className="w-full h-16  flex-row justify-start  items-center    ">
-                      <MaterialIcons
+                      <Icon
+                        type="material"
                         name="groups"
                         size={40}
                         color={"#121418"}
@@ -63,14 +56,24 @@ const AcceptRequest = () => {
                     </View>
                     <Text className="font-bold text-base">Reward</Text>
                     <View className="w-full h-16  flex-row justify-start  items-center    ">
-                      <FontAwesome5 name="coins" size={34} color={"#121418"} />
+                      <Icon
+                        type="font-awesome-5"
+                        name="coins"
+                        size={34}
+                        color={"#121418"}
+                      />
                       <Text className="text-base font-medium ml-8">
                         10 BG token / 20 mins duration
                       </Text>
                     </View>
                     <Text className="font-bold text-base">Location</Text>
                     <View className="w-full h-16  flex-row justify-start  items-center    ">
-                      <Entypo name="location" size={34} color={"#121418"} />
+                      <Icon
+                        name="location"
+                        size={34}
+                        color={"#121418"}
+                        type="entypo"
+                      />
                       <Text className="text-base font-medium ml-8">
                         1213st, Bogota, Colombia
                       </Text>
@@ -82,10 +85,8 @@ const AcceptRequest = () => {
               <TouchableOpacity
                 onPress={() => navigation.navigate("WalkConfirm")}
               >
-                <LinearGradient
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 0 }}
-                  colors={["#3998FF", "#3998FF"]}
+                <View
+                  className="bg-[#3998FF]"
                   style={{
                     width: "98%",
                     height: 60,
@@ -97,7 +98,7 @@ const AcceptRequest = () => {
                   <Text className="text-white font-bold text-2xl">
                     Accept Request
                   </Text>
-                </LinearGradient>
+                </View>
               </TouchableOpacity>
             </View>
           </View>

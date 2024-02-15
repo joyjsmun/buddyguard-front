@@ -11,13 +11,8 @@ import {
 } from "react-native";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Feather,
-  FontAwesome,
-  Fontisto,
-  Ionicons,
-  MaterialIcons,
-} from "@expo/vector-icons";
+import { Icon } from "@rneui/themed";
+
 import {
   Avatar1,
   Hangout1,
@@ -27,8 +22,6 @@ import {
   Hangout5,
   Map,
 } from "../assets/images";
-import { LinearGradient } from "expo-linear-gradient";
-import icons from "./icons";
 
 const HangoutSwipe = () => {
   const navigation = useNavigation();
@@ -122,7 +115,12 @@ const HangoutSwipe = () => {
               Gm, Joy
             </Text>
             <View className="flex flex-row justify-center items-center">
-              <MaterialIcons name="my-location" size={17} color="#231f20" />
+              <Icon
+                type="material"
+                name="my-location"
+                size={17}
+                color="#231f20"
+              />
               <Text className="text-[#231f20] font-medium text-base ml-1">
                 100m away
               </Text>
@@ -182,7 +180,8 @@ const HangoutSwipe = () => {
               <View className="absolute top-64  w-full px-4 ">
                 <View className="flex flex-row justify-around items-center">
                   <View className="flex flex-row bg-[#F8C145] py-1 px-2 justify-center items-center rounded-2xl">
-                    <MaterialIcons
+                    <Icon
+                      type="material"
                       name="sports-tennis"
                       size={24}
                       color={"#fff"}
@@ -190,11 +189,17 @@ const HangoutSwipe = () => {
                     <Text className="text-white ml-1">Sports</Text>
                   </View>
                   <View className="flex flex-row bg-[#337B58] py-1 px-2 justify-center items-center rounded-2xl">
-                    <FontAwesome name="group" size={24} color={"#fff"} />
+                    <Icon
+                      type="font-awesome"
+                      name="group"
+                      size={24}
+                      color={"#fff"}
+                    />
                     <Text className="text-white ml-1">Group</Text>
                   </View>
                   <View className="flex flex-row bg-[#FF5757] py-1 px-2 justify-center items-center rounded-2xl">
-                    <MaterialIcons
+                    <Icon
+                      type="material"
                       name="sports-tennis"
                       size={24}
                       color={"#fff"}
@@ -226,7 +231,12 @@ const HangoutSwipe = () => {
                     }}
                     onPress={closePress}
                   >
-                    <Ionicons name="close-sharp" color="white" size={56} />
+                    <Icon
+                      type="ionicon"
+                      name="close-sharp"
+                      color="white"
+                      size={56}
+                    />
                   </TouchableOpacity>
                   <TouchableOpacity
                     style={{
@@ -239,7 +249,12 @@ const HangoutSwipe = () => {
                     }}
                     onPress={checkPress}
                   >
-                    <Ionicons name="heart-outline" color="white" size={54} />
+                    <Icon
+                      type="ionicon"
+                      name="heart-outline"
+                      color="white"
+                      size={54}
+                    />
                   </TouchableOpacity>
                 </View>
               </View>

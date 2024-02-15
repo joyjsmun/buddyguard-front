@@ -5,26 +5,18 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
-  TextInput,
 } from "react-native";
 import React, { useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Feather,
-  MaterialCommunityIcons,
-  MaterialIcons,
-} from "@expo/vector-icons";
+
 import {
   Avatar1,
   Avatar2,
   Hangout1,
-  Hangout2,
   Hangout3,
   LogoImage,
   Map,
 } from "../assets/images";
-import { LinearGradient } from "expo-linear-gradient";
-import SwipeButton from "../components/SwipeButton";
 
 const WalkConfirm = () => {
   const navigation = useNavigation();
@@ -132,11 +124,9 @@ const WalkConfirm = () => {
               <TouchableOpacity
                 onPress={() => navigation.navigate("WalkStatus")}
               >
-                <LinearGradient
-                  start={{ x: 0, y: 0 }}
-                  end={{ x: 1, y: 0.5 }}
-                  colors={["#4F9171", "#4F9171"]}
+                <View
                   style={{
+                    backgroundColor: "#4F9171",
                     width: "98%",
                     height: 60,
                     justifyContent: "center",
@@ -147,7 +137,7 @@ const WalkConfirm = () => {
                   <Text className="text-white font-bold text-2xl">
                     Confirm Buddy Guard
                   </Text>
-                </LinearGradient>
+                </View>
               </TouchableOpacity>
             </View>
           </View>

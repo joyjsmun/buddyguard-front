@@ -9,12 +9,8 @@ import {
 } from "react-native";
 import React, { useCallback, useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import {
-  Feather,
-  FontAwesome,
-  MaterialCommunityIcons,
-  MaterialIcons,
-} from "@expo/vector-icons";
+import { Icon } from "@rneui/themed";
+
 import {
   Avatar1,
   Avatar2,
@@ -24,8 +20,6 @@ import {
   LogoImage,
   Map,
 } from "../assets/images";
-import { LinearGradient } from "expo-linear-gradient";
-import SwipeButton from "../components/SwipeButton";
 
 const SupportConfirm = () => {
   const navigation = useNavigation();
@@ -136,16 +130,19 @@ const SupportConfirm = () => {
               {/* Support confirm button */}
               <View className="flex flex-row w-full justify-between px-2">
                 <View>
-                  <FontAwesome name="commenting" size={50} color={"#CAC6D1"} />
+                  <Icon
+                    type="font-awesome"
+                    name="commenting"
+                    size={50}
+                    color={"#CAC6D1"}
+                  />
                 </View>
                 <TouchableOpacity
                   onPress={() => navigation.navigate("SupportStatus")}
                 >
-                  <LinearGradient
-                    start={{ x: 0, y: 0 }}
-                    end={{ x: 1, y: 0.5 }}
-                    colors={["#1B75BC", "#1B75BC"]}
+                  <View
                     style={{
+                      backgroundColor: "#1B75BC",
                       width: "100%",
                       height: 60,
                       justifyContent: "center",
@@ -157,7 +154,7 @@ const SupportConfirm = () => {
                     <Text className="text-[#E5E7ED] font-bold text-lg ">
                       Support Request
                     </Text>
-                  </LinearGradient>
+                  </View>
                 </TouchableOpacity>
               </View>
             </View>

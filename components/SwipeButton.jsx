@@ -1,7 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient"; // Import LinearGradient from expo-linear-gradient
 
 const SwipeButton = () => {
   const navigation = useNavigation();

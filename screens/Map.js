@@ -2,11 +2,11 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useLayoutEffect } from "react";
 import { View, StyleSheet, Text } from "react-native";
 import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
-import { Slider, Icon, SearchBar, Button } from "@rneui/themed";
+import { Icon, SearchBar, Button } from "@rneui/themed";
 
 const SearchSection = () => {
   return (
-    <View className="absolute top-24 w-[95%] self-center">
+    <View className="absolute bottom-[10.5%] w-[100%] h-auto p-2 self-center bg-gray-200">
       <SearchBar
         placeholder="Search your destination.."
         ref={(search) => (this.search = search)}
@@ -14,11 +14,36 @@ const SearchSection = () => {
         round={true}
         inputContainerStyle={{
           backgroundColor: "white",
+          paddingLeft: 10,
         }}
         containerStyle={{
           backgroundColor: "transparent",
         }}
       />
+      <View className="mt-2 flex-row">
+        <Button
+          onPress={() => {}}
+          containerStyle={{
+            width: "48%",
+            borderRadius: 5,
+            marginHorizontal: 2,
+          }}
+        >
+          <Text className="font-bold mr-2 text-white text-lg p-1 ">Reset</Text>
+          <Icon name="refresh" color="white" />
+        </Button>
+        <Button
+          onPress={() => {}}
+          containerStyle={{
+            width: "48%",
+            borderRadius: 5,
+            marginHorizontal: 2,
+          }}
+        >
+          <Text className="font-bold mr-2 text-white text-lg p-1 ">Search</Text>
+          <Icon name="search" color="white" />
+        </Button>
+      </View>
     </View>
   );
 };
@@ -33,10 +58,11 @@ export default function Map() {
   }, [navigation]);
 
   return (
-    <View className="flex-1 relative w-full">
+    <View className="flex-1 relative w-full ">
       <MapView
         className="flex-1 "
         provider={PROVIDER_GOOGLE}
+        onMapReady={() => {}}
         initialRegion={{
           latitude: 37.78825,
           longitude: -122.4324,
